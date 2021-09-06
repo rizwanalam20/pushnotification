@@ -9,19 +9,20 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
- 
+  
   <div id="wrapper">
 
       <button id="notify-button">Notify Me!!</button>
       <button id="clear-button">Clear All!</button>
       <button id="check-button">Check Permission</button>
+      <button id="permi-button">true Permission</button>
   </div>
   
- <script>
+  <script>
     $("#notify-button").click(function(){
       Push.create("Click 4 Pandit",{
           body: "This is example of Push Notification ",
-          icon: 'favicon.png',
+          icon: 'pushnotification\favicon.png',
           timeout: 2000,
           onClick: function () {
               window.focus();
@@ -34,6 +35,11 @@
     });
     $("#check-button").click(function(){ 
           console.log(Push.Permission.has());
+    });
+});
+    $("#permi-button").click(function(){ 
+        Push.Permission = "true";
+        console.log(Push.Permission.has());
     });
 </script>
   </body>
