@@ -15,7 +15,7 @@
       <button id="notify-button">Notify Me!!</button>
       <button id="clear-button">Clear All!</button>
       <button id="check-button">Check Permission</button>
-      <button id="permi-button">true Permission</button>
+    
   </div>
   
   <script>
@@ -37,10 +37,7 @@
           console.log(Push.Permission.has());
     });
 
-    $("#permi-button").click(function(){ 
-        Push.Permission = "true";
-        console.log(Push.Permission.has());
-    });
+   
 </script>
   </body>
 </html>
